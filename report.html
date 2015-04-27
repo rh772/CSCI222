@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flight Management System - Report</title>
+	<link rel="stylesheet" href="css/fms.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/jquery.canvasjs.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var chart = new CanvasJS.Chart("chartContainer",
+		{
+			title:{
+				text: "Chocolate bars sold - per month"
+			},
+			data: [
+			{
+				type: "line",
+
+				dataPoints: [
+				{ x: 1, y: 450 },
+				{ x: 2, y: 414 },
+				{ x: 3, y: 520 },
+				{ x: 4, y: 460 },
+				{ x: 5, y: 450 },
+				{ x: 6, y: 570 },
+				{ x: 7, y: 480 },
+				{ x: 8, y: 480 },
+				{ x: 9, y: 410 },
+				{ x: 10, y: 500 },
+				{ x: 11, y: 480 },
+				{ x: 12, y: 510 }
+				]
+			}
+			]
+		});
+
+		chart.render();
+	});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="account">
+			<h2>Report for <span class="results">Flights Booked</span></h2>
+			<br/>
+			<span class="menu">Back <i class="fa fa-arrow-left"></i></span>
+			<span class="menu">Log Out <i class="fa fa-sign-out"></i></span>
+		</div>
+		<div id="chartContainer"></div>
+	</div>
+</body>
+</html>
