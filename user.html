@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flight Management System - User</title>
+	<link rel="stylesheet" href="css/fms.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		//user
+		var authority = 0; //0 customer, 1 agent, 2 staff, 3 flight manager, 4 service manager, 5 administrator
+		var username = "Sandon Joubert";
+		
+		//display
+		$( ".username" ).html(username);
+		if(authority == 0)
+		{
+			$( ".container" ).append("<a href='' class='push_button blue'>Book Flight</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Search Flight</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Booking History</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Check Report</a>");
+		}
+		else if(authority == 1)
+		{
+			$( ".container" ).append("<a href='' class='push_button blue'>Display Flights</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Search Users</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Book Flight</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Booking History</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Search Flights</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Check Report</a>");
+		}
+		else if(authority == 2)
+		{
+			$( ".container" ).append("<a href='' class='push_button blue'>Search Users</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Book Flight</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Search Flights</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Check Report</a>");
+		}
+		else if(authority == 3)
+		{
+			$( ".container" ).append("<a href='' class='push_button blue'>Display Flights</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Search Users</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Search Flights</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Check Report</a>");
+		}
+		else if(authority == 4)
+		{
+			$( ".container" ).append("<a href='' class='push_button blue'>Display Flights</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Search Users</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Create Flight</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Search Flights</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Check Report</a>");
+		}
+		else if(authority == 5)
+		{
+			$( ".container" ).append("<a href='' class='push_button blue'>Display Flights</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Search Users</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Create Flight</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Check Reports</a>");
+			$( ".container" ).append("<a href='' class='push_button blue'>Search Flights</a>");
+		}
+		
+		//mobile / desktop
+		if($( window ).width() < 1000)
+		{
+			$( ".push_button" ).addClass("bmobile");
+			$( ".push_button" ).removeClass("bdesktop");
+		}
+		else
+		{
+			$( ".push_button" ).removeClass("bmobile");
+			$( ".push_button" ).addClass("bdesktop");
+		}
+		
+		$(window).resize(function() {
+			if($( window ).width() < 1000)
+			{
+				$( ".push_button" ).addClass("bmobile");
+				$( ".push_button" ).removeClass("bdesktop");
+			}
+			else
+			{
+				$( ".push_button" ).removeClass("bmobile");
+				$( ".push_button" ).addClass("bdesktop");
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="account">
+			<h2>Welcome <span class="username"></span>!</h2>
+			<br/>
+			<span class="menu">Change Account <i class="fa fa-cog"></i></span>
+			<span class="menu">Log Out <i class="fa fa-sign-out"></i></span>
+		</div>
+	</div>
+</body>
+</html>

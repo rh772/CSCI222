@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flight Management System - Profile</title>
+	<link rel="stylesheet" href="css/fms.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		var username 	= "sandon1994";
+		var email 		= "ssj199@uow.edu.au";
+		var fname		= "Sandon";
+		var lname		= "Joubert";
+		var phone		= "04 1234 5678";
+		var nationality	= "Australian";
+		$( "#username" ).attr( "placeholder", username );
+		$( "#email" ).attr( "placeholder", email );
+		$( "#fname" ).attr( "placeholder", fname );
+		$( "#lname" ).attr( "placeholder", lname );
+		$( "#phone" ).attr( "placeholder", phone );
+		$( "#nationality" ).attr( "placeholder", nationality );
+		
+		$( ".username" ).append( fname + " " + lname);
+	});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="account">
+			<h2>Welcome <span class="username"></span>!</h2>
+			<br/>
+			<span class="menu">Back <i class="fa fa-arrow-left"></i></span>
+			<span class="menu">Log Out <i class="fa fa-sign-out"></i></span>
+		</div>
+		<form class="form form-aligned">
+			<fieldset>
+				<div class="control-group">
+					<label for="username">Username</label>
+					<input id="username" type="text" placeholder="">
+				</div>
+				<div class="control-group">
+					<label for="email">E-mail</label>
+					<input id="email" type="email" placeholder="">
+				</div>
+				<div class="control-group">
+					<label for="fname">First Name</label>
+					<input id="fname" type="text" placeholder="">
+				</div>
+				<div class="control-group">
+					<label for="lname">Surname</label>
+					<input id="lname" type="text" placeholder="">
+				</div>
+				<div class="control-group">
+					<label for="phone">Phone Number</label>
+					<input id="phone" type="text" placeholder="">
+				</div>
+				<div class="control-group">
+					<label for="nationality">Nationality</label>
+					<input id="nationality" type="text" placeholder="">
+				</div>
+				<div class="controls">
+					<button type="submit" class="button button-primary">Save and Exit <i class="fa fa-save"></i></button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>
